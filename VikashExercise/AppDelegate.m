@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-#import "MasterViewController.h"
+
 
 @implementation AppDelegate
 
@@ -19,9 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    NSSet *set = [NSSet setWithObjects:FBLoggingBehaviorFBRequests, nil];
+    [FBSettings setLoggingBehavior:set];
+    
+
     return YES;
 }
 							

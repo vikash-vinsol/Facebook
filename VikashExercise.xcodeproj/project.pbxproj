@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0C9BED18080F3500AE5CC9 /* MyFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0C9BEC18080F3500AE5CC9 /* MyFirstViewController.m */; };
+		EB94E6701816A9940093DFF9 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB94E66F1816A9940093DFF9 /* SDWebImage.framework */; };
+		EB94E6721816A9BF0093DFF9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB94E6711816A9BF0093DFF9 /* ImageIO.framework */; };
+		EB94E6741816AA390093DFF9 /* download (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB94E6731816AA390093DFF9 /* download (1).jpeg */; };
+		EB94E6761816AC5F0093DFF9 /* index.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB94E6751816AC5F0093DFF9 /* index.jpg */; };
+		EB94E67818177E8B0093DFF9 /* index.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94E67718177E8B0093DFF9 /* index.png */; };
+		EBA463EF181275B800797D62 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA463EE181275B800797D62 /* MyTableViewController.m */; };
+		EBA463F2181275D200797D62 /* MyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA463F1181275D200797D62 /* MyDetailViewController.m */; };
 		EBE16D961806EA5100B81EC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16D951806EA5100B81EC5 /* Foundation.framework */; };
 		EBE16D981806EA5100B81EC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16D971806EA5100B81EC5 /* CoreGraphics.framework */; };
 		EBE16D9A1806EA5100B81EC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16D991806EA5100B81EC5 /* UIKit.framework */; };
@@ -16,8 +24,6 @@
 		EBE16DA81806EA5100B81EC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE16DA71806EA5100B81EC5 /* AppDelegate.m */; };
 		EBE16DAB1806EA5100B81EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE16DA91806EA5100B81EC5 /* Main.storyboard */; };
 		EBE16DAE1806EA5100B81EC5 /* VikashExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBE16DAC1806EA5100B81EC5 /* VikashExercise.xcdatamodeld */; };
-		EBE16DB11806EA5100B81EC5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE16DB01806EA5100B81EC5 /* MasterViewController.m */; };
-		EBE16DB41806EA5100B81EC5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE16DB31806EA5100B81EC5 /* DetailViewController.m */; };
 		EBE16DB61806EA5100B81EC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE16DB51806EA5100B81EC5 /* Images.xcassets */; };
 		EBE16DBD1806EA5100B81EC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16DBC1806EA5100B81EC5 /* XCTest.framework */; };
 		EBE16DBE1806EA5100B81EC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16D951806EA5100B81EC5 /* Foundation.framework */; };
@@ -25,6 +31,11 @@
 		EBE16DC01806EA5100B81EC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16D9B1806EA5100B81EC5 /* CoreData.framework */; };
 		EBE16DC81806EA5100B81EC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE16DC61806EA5100B81EC5 /* InfoPlist.strings */; };
 		EBE16DCA1806EA5100B81EC5 /* VikashExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE16DC91806EA5100B81EC5 /* VikashExerciseTests.m */; };
+		EBE16DD41806EAB700B81EC5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16DD31806EAB700B81EC5 /* FacebookSDK.framework */; };
+		EBE16DD61806EB0300B81EC5 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBE16DD51806EB0300B81EC5 /* FBUserSettingsViewResources.bundle */; };
+		EBE16DDA1806EB4800B81EC5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16DD71806EB4800B81EC5 /* Accounts.framework */; };
+		EBE16DDB1806EB4800B81EC5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16DD81806EB4800B81EC5 /* AdSupport.framework */; };
+		EBE16DDC1806EB4800B81EC5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE16DD91806EB4800B81EC5 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0C9BEB18080F3500AE5CC9 /* MyFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFirstViewController.h; sourceTree = "<group>"; };
+		EB0C9BEC18080F3500AE5CC9 /* MyFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstViewController.m; sourceTree = "<group>"; };
+		EB94E66F1816A9940093DFF9 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		EB94E6711816A9BF0093DFF9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EB94E6731816AA390093DFF9 /* download (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "download (1).jpeg"; sourceTree = "<group>"; };
+		EB94E6751816AC5F0093DFF9 /* index.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = index.jpg; path = VikashExerciseTests/index.jpg; sourceTree = SOURCE_ROOT; };
+		EB94E67718177E8B0093DFF9 /* index.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index.png; sourceTree = "<group>"; };
+		EBA463ED181275B800797D62 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		EBA463EE181275B800797D62 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		EBA463F0181275D200797D62 /* MyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailViewController.h; sourceTree = "<group>"; };
+		EBA463F1181275D200797D62 /* MyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailViewController.m; sourceTree = "<group>"; };
 		EBE16D921806EA5100B81EC5 /* VikashExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VikashExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE16D951806EA5100B81EC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBE16D971806EA5100B81EC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,16 +73,17 @@
 		EBE16DA71806EA5100B81EC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EBE16DAA1806EA5100B81EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBE16DAD1806EA5100B81EC5 /* VikashExercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VikashExercise.xcdatamodel; sourceTree = "<group>"; };
-		EBE16DAF1806EA5100B81EC5 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		EBE16DB01806EA5100B81EC5 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		EBE16DB21806EA5100B81EC5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		EBE16DB31806EA5100B81EC5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EBE16DB51806EA5100B81EC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBE16DBB1806EA5100B81EC5 /* VikashExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VikashExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE16DBC1806EA5100B81EC5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EBE16DC51806EA5100B81EC5 /* VikashExerciseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VikashExerciseTests-Info.plist"; sourceTree = "<group>"; };
 		EBE16DC71806EA5100B81EC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBE16DC91806EA5100B81EC5 /* VikashExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VikashExerciseTests.m; sourceTree = "<group>"; };
+		EBE16DD31806EAB700B81EC5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		EBE16DD51806EB0300B81EC5 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		EBE16DD71806EB4800B81EC5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EBE16DD81806EB4800B81EC5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		EBE16DD91806EB4800B81EC5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +91,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB94E6721816A9BF0093DFF9 /* ImageIO.framework in Frameworks */,
+				EBE16DDA1806EB4800B81EC5 /* Accounts.framework in Frameworks */,
+				EBE16DDB1806EB4800B81EC5 /* AdSupport.framework in Frameworks */,
+				EBE16DDC1806EB4800B81EC5 /* Social.framework in Frameworks */,
 				EBE16D981806EA5100B81EC5 /* CoreGraphics.framework in Frameworks */,
+				EBE16DD41806EAB700B81EC5 /* FacebookSDK.framework in Frameworks */,
 				EBE16D9C1806EA5100B81EC5 /* CoreData.framework in Frameworks */,
 				EBE16D9A1806EA5100B81EC5 /* UIKit.framework in Frameworks */,
+				EB94E6701816A9940093DFF9 /* SDWebImage.framework in Frameworks */,
 				EBE16D961806EA5100B81EC5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +140,13 @@
 		EBE16D941806EA5100B81EC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB94E6711816A9BF0093DFF9 /* ImageIO.framework */,
+				EB94E66F1816A9940093DFF9 /* SDWebImage.framework */,
+				EBE16DD71806EB4800B81EC5 /* Accounts.framework */,
+				EBE16DD81806EB4800B81EC5 /* AdSupport.framework */,
+				EBE16DD91806EB4800B81EC5 /* Social.framework */,
+				EBE16DD51806EB0300B81EC5 /* FBUserSettingsViewResources.bundle */,
+				EBE16DD31806EAB700B81EC5 /* FacebookSDK.framework */,
 				EBE16D951806EA5100B81EC5 /* Foundation.framework */,
 				EBE16D971806EA5100B81EC5 /* CoreGraphics.framework */,
 				EBE16D991806EA5100B81EC5 /* UIKit.framework */,
@@ -126,12 +162,14 @@
 				EBE16DA61806EA5100B81EC5 /* AppDelegate.h */,
 				EBE16DA71806EA5100B81EC5 /* AppDelegate.m */,
 				EBE16DA91806EA5100B81EC5 /* Main.storyboard */,
-				EBE16DAF1806EA5100B81EC5 /* MasterViewController.h */,
-				EBE16DB01806EA5100B81EC5 /* MasterViewController.m */,
-				EBE16DB21806EA5100B81EC5 /* DetailViewController.h */,
-				EBE16DB31806EA5100B81EC5 /* DetailViewController.m */,
 				EBE16DB51806EA5100B81EC5 /* Images.xcassets */,
 				EBE16DAC1806EA5100B81EC5 /* VikashExercise.xcdatamodeld */,
+				EB0C9BEB18080F3500AE5CC9 /* MyFirstViewController.h */,
+				EB0C9BEC18080F3500AE5CC9 /* MyFirstViewController.m */,
+				EBA463ED181275B800797D62 /* MyTableViewController.h */,
+				EBA463EE181275B800797D62 /* MyTableViewController.m */,
+				EBA463F0181275D200797D62 /* MyDetailViewController.h */,
+				EBA463F1181275D200797D62 /* MyDetailViewController.m */,
 				EBE16D9E1806EA5100B81EC5 /* Supporting Files */,
 			);
 			path = VikashExercise;
@@ -140,9 +178,11 @@
 		EBE16D9E1806EA5100B81EC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB94E67718177E8B0093DFF9 /* index.png */,
 				EBE16D9F1806EA5100B81EC5 /* VikashExercise-Info.plist */,
 				EBE16DA01806EA5100B81EC5 /* InfoPlist.strings */,
 				EBE16DA31806EA5100B81EC5 /* main.m */,
+				EB94E6751816AC5F0093DFF9 /* index.jpg */,
 				EBE16DA51806EA5100B81EC5 /* VikashExercise-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -162,6 +202,7 @@
 			children = (
 				EBE16DC51806EA5100B81EC5 /* VikashExerciseTests-Info.plist */,
 				EBE16DC61806EA5100B81EC5 /* InfoPlist.strings */,
+				EB94E6731816AA390093DFF9 /* download (1).jpeg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE16DD61806EB0300B81EC5 /* FBUserSettingsViewResources.bundle in Resources */,
+				EB94E67818177E8B0093DFF9 /* index.png in Resources */,
 				EBE16DB61806EA5100B81EC5 /* Images.xcassets in Resources */,
 				EBE16DA21806EA5100B81EC5 /* InfoPlist.strings in Resources */,
 				EBE16DAB1806EA5100B81EC5 /* Main.storyboard in Resources */,
@@ -253,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE16DC81806EA5100B81EC5 /* InfoPlist.strings in Resources */,
+				EB94E6741816AA390093DFF9 /* download (1).jpeg in Resources */,
+				EB94E6761816AC5F0093DFF9 /* index.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE16DB41806EA5100B81EC5 /* DetailViewController.m in Sources */,
-				EBE16DB11806EA5100B81EC5 /* MasterViewController.m in Sources */,
 				EBE16DAE1806EA5100B81EC5 /* VikashExercise.xcdatamodeld in Sources */,
+				EBA463EF181275B800797D62 /* MyTableViewController.m in Sources */,
 				EBE16DA81806EA5100B81EC5 /* AppDelegate.m in Sources */,
 				EBE16DA41806EA5100B81EC5 /* main.m in Sources */,
+				EB0C9BED18080F3500AE5CC9 /* MyFirstViewController.m in Sources */,
+				EBA463F2181275D200797D62 /* MyDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,9 +440,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Documents/FacebookSDK,
+					/Users/vikashsoni/Desktop/VikashExercise,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VikashExercise/VikashExercise-Prefix.pch";
 				INFOPLIST_FILE = "VikashExercise/VikashExercise-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,9 +463,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Documents/FacebookSDK,
+					/Users/vikashsoni/Desktop/VikashExercise,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VikashExercise/VikashExercise-Prefix.pch";
 				INFOPLIST_FILE = "VikashExercise/VikashExercise-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,6 +542,7 @@
 				EBE16DCF1806EA5100B81EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBE16DD01806EA5100B81EC5 /* Build configuration list for PBXNativeTarget "VikashExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +551,7 @@
 				EBE16DD21806EA5100B81EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
