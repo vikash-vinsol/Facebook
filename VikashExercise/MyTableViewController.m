@@ -13,15 +13,16 @@
 
 @interface MyTableViewController ()
 
-@property (retain, nonatomic) UISearchBar *searchBar;
+//@property (retain, nonatomic) UISearchBar *searchBar;
 @property (nonatomic, readonly, retain) UIView *canvasView;
 @property (nonatomic,strong) NSArray *reverseOrder;
-
 
 @end
 
 @implementation MyTableViewController
 @synthesize myFirstView,secondArray;
+NSArray *searchResults;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,12 +34,40 @@
     return self;
 }
 
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
+    searchResults = [secondArray filteredArrayUsingPredicate:resultPredicate];
+    NSLog(@"Search results %d",searchResults.count);
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                                         objectAtIndex:[self.searchDisplayController.searchBar
+                                                        selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.searchBar.showsCancelButton = YES;
+    self.searchBar.delegate = self;
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *descriptors = [NSArray arrayWithObject: descriptor];
+    _reverseOrder = [secondArray sortedArrayUsingDescriptors:descriptors];
     
     NSLog(@"%d",secondArray.count);
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MyCell"];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,31 +84,59 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return secondArray.count;
-}
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return [searchResults count];
+        
+    }
+    else {
+        return [secondArray count];
+        
+    }}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MyCell";
-    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *descriptors = [NSArray arrayWithObject: descriptor];
-    _reverseOrder = [secondArray sortedArrayUsingDescriptors:descriptors];
+    static NSString *CellIdentifier = @"MyCell";    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[[_reverseOrder objectAtIndex:indexPath.row]valueForKey:@"name"]];
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-   
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[[[[_reverseOrder objectAtIndex:indexPath.row] valueForKey:@"picture"] valueForKey:@"data"] valueForKey:@"url"]]placeholderImage:[UIImage imageNamed:@"index.png"]];
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[[searchResults objectAtIndex:indexPath.row]valueForKey:@"name"]];
+            [cell.imageView setImageWithURL:[NSURL URLWithString:[[[[searchResults objectAtIndex:indexPath.row] valueForKey:@"picture"] valueForKey:@"data"] valueForKey:@"url"]]placeholderImage:[UIImage imageNamed:@"index.png"]];
+    }
+    else
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[[_reverseOrder objectAtIndex:indexPath.row]valueForKey:@"name"]];
+            [cell.imageView setImageWithURL:[NSURL URLWithString:[[[[_reverseOrder objectAtIndex:indexPath.row] valueForKey:@"picture"] valueForKey:@"data"] valueForKey:@"url"]]placeholderImage:[UIImage imageNamed:@"index.png"]];
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        MyDetailViewController *dvController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryBoard"];
+        [self.navigationController pushViewController:dvController animated:YES];
+        dvController.thirdArray = [searchResults objectAtIndex:indexPath.row];
+        
+    }
+    else
+    {
     MyDetailViewController *dvController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryBoard"];
     [self.navigationController pushViewController:dvController animated:YES];
     dvController.thirdArray = [self.reverseOrder objectAtIndex:indexPath.row];
     NSLog(@"%@",[dvController.thirdArray valueForKey:@"name"]);
+    }
 }
 
 

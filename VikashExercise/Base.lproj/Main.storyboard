@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PhC-UJ-hqg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PhC-UJ-hqg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--My First View Controller-->
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FaceBook Application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRM-GI-lqW">
-                                <rect key="frame" x="20" y="191" width="290" height="21"/>
+                                <rect key="frame" x="20" y="180" width="290" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -104,10 +104,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="myJ-z2-RLB">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="bcZ-k5-q5b">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="gIv-Yi-a3v" id="jVc-XH-0d1"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" textLabel="jZB-oR-fbW" style="IBUITableViewCellStyleDefault" id="LrA-8L-Tjd">
@@ -138,8 +141,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5Dq-5R-lth"/>
+                    <connections>
+                        <outlet property="searchBar" destination="bcZ-k5-q5b" id="ni2-26-4Cf"/>
+                        <outlet property="searchDisplayController" destination="OEP-8s-uPN" id="1kU-lq-ogK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39c-3X-hGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="OEP-8s-uPN">
+                    <connections>
+                        <outlet property="delegate" destination="gIv-Yi-a3v" id="4Bm-TJ-35y"/>
+                        <outlet property="searchBar" destination="bcZ-k5-q5b" id="C9K-ZZ-3ZN"/>
+                        <outlet property="searchContentsController" destination="gIv-Yi-a3v" id="ekO-Y7-hea"/>
+                        <outlet property="searchResultsDataSource" destination="gIv-Yi-a3v" id="ksa-1n-hti"/>
+                        <outlet property="searchResultsDelegate" destination="gIv-Yi-a3v" id="n1Q-7j-a4T"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1064" y="37"/>
         </scene>

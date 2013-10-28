@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EB0C9BED18080F3500AE5CC9 /* MyFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0C9BEC18080F3500AE5CC9 /* MyFirstViewController.m */; };
+		EB328936181AA28700F37297 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB328933181AA28700F37297 /* SVProgressHUD.bundle */; };
+		EB328937181AA28700F37297 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EB328935181AA28700F37297 /* SVProgressHUD.m */; };
 		EB94E6701816A9940093DFF9 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB94E66F1816A9940093DFF9 /* SDWebImage.framework */; };
 		EB94E6721816A9BF0093DFF9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB94E6711816A9BF0093DFF9 /* ImageIO.framework */; };
 		EB94E6741816AA390093DFF9 /* download (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB94E6731816AA390093DFF9 /* download (1).jpeg */; };
@@ -51,6 +53,10 @@
 /* Begin PBXFileReference section */
 		EB0C9BEB18080F3500AE5CC9 /* MyFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFirstViewController.h; sourceTree = "<group>"; };
 		EB0C9BEC18080F3500AE5CC9 /* MyFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstViewController.m; sourceTree = "<group>"; };
+		EB328932181AA28700F37297 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		EB328933181AA28700F37297 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		EB328934181AA28700F37297 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		EB328935181AA28700F37297 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		EB94E66F1816A9940093DFF9 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		EB94E6711816A9BF0093DFF9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EB94E6731816AA390093DFF9 /* download (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "download (1).jpeg"; sourceTree = "<group>"; };
@@ -178,6 +184,10 @@
 		EBE16D9E1806EA5100B81EC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB328932181AA28700F37297 /* SVProgressHUD-Prefix.pch */,
+				EB328933181AA28700F37297 /* SVProgressHUD.bundle */,
+				EB328934181AA28700F37297 /* SVProgressHUD.h */,
+				EB328935181AA28700F37297 /* SVProgressHUD.m */,
 				EB94E67718177E8B0093DFF9 /* index.png */,
 				EBE16D9F1806EA5100B81EC5 /* VikashExercise-Info.plist */,
 				EBE16DA01806EA5100B81EC5 /* InfoPlist.strings */,
@@ -284,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE16DD61806EB0300B81EC5 /* FBUserSettingsViewResources.bundle in Resources */,
+				EB328936181AA28700F37297 /* SVProgressHUD.bundle in Resources */,
 				EB94E67818177E8B0093DFF9 /* index.png in Resources */,
 				EBE16DB61806EA5100B81EC5 /* Images.xcassets in Resources */,
 				EBE16DA21806EA5100B81EC5 /* InfoPlist.strings in Resources */,
@@ -311,6 +322,7 @@
 				EBE16DAE1806EA5100B81EC5 /* VikashExercise.xcdatamodeld in Sources */,
 				EBA463EF181275B800797D62 /* MyTableViewController.m in Sources */,
 				EBE16DA81806EA5100B81EC5 /* AppDelegate.m in Sources */,
+				EB328937181AA28700F37297 /* SVProgressHUD.m in Sources */,
 				EBE16DA41806EA5100B81EC5 /* main.m in Sources */,
 				EB0C9BED18080F3500AE5CC9 /* MyFirstViewController.m in Sources */,
 				EBA463F2181275D200797D62 /* MyDetailViewController.m in Sources */,

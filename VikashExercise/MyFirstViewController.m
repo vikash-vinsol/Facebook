@@ -9,6 +9,8 @@
 #import "MyFirstViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "MyTableViewController.h"
+#import "SVProgressHUD.h"
+
 
 
 @interface MyFirstViewController () <FBLoginViewDelegate>
@@ -65,36 +67,37 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)basicShare:(id)sender
-{
-    [FBNativeDialogs presentShareDialogModallyFrom:self initialText:@"first FB sharing" image:nil url:nil handler: ^(FBNativeDialogResult result, NSError *error)
-     {
-         if (error)
-         {
-             NSLog(@"error");
-         }
-     }];
-}
+//- (IBAction)basicShare:(id)sender
+//{
+//    [FBNativeDialogs presentShareDialogModallyFrom:self initialText:@"first FB sharing" image:nil url:nil handler: ^(FBNativeDialogResult result, NSError *error)
+//     {
+//         if (error)
+//         {
+//             NSLog(@"error");
+//         }
+//     }];
+//}
 
 - (IBAction)detailFriendListClicked:(id)sender
 {
-    detailFriendListbutton.hidden =YES;
+    [SVProgressHUD showWithStatus:@"Loading picker..."];
+           FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?fields=name,birthday,picture,location"];
+            [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+             {
+                 NSArray *data = [result objectForKey:@"data"];
+                 _secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"tableStoryBoard"];
+                 _secondView.secondArray = data;
+                 [self.navigationController pushViewController:_secondView animated:YES];
+                 
+                 [SVProgressHUD dismiss];
+             }
+        ];
 
-    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?fields=name,birthday,picture,location"];
-    [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
-     {
-         NSArray *data = [result objectForKey:@"data"];
-         _secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"tableStoryBoard"];
-         _secondView.secondArray = data;
-         [self.navigationController pushViewController:_secondView animated:YES];
-     }
-     ];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    detailFriendListbutton.hidden = YES;
-
+    detailFriendListbutton.hidden = NO;
 }
 
 #pragma mark : Facebook details By FQL

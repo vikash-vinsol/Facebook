@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MyFirstViewController.h"
 
-@interface MyTableViewController : UITableViewController
+@interface MyTableViewController : UITableViewController<UISearchBarDelegate>
 
 @property (strong,nonatomic) MyFirstViewController *myFirstView;
 @property (strong, nonatomic) NSArray *secondArray;
+@property IBOutlet UISearchBar *searchBar;
 
 @end

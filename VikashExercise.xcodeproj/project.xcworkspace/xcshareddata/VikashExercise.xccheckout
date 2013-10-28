@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98F3EDFB-0631-4A24-ACA4-00F7BBCFA6A3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VikashExercise</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A167164-7E37-4134-81B0-C164663F81A9</key>
+		<string>ssh://github.com/vikash-vinsol/Facebook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VikashExercise.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A167164-7E37-4134-81B0-C164663F81A9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/vikash-vinsol/Facebook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A167164-7E37-4134-81B0-C164663F81A9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A167164-7E37-4134-81B0-C164663F81A9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VikashExercise</string>
+		</dict>
+	</array>
+</dict>
+</plist>
